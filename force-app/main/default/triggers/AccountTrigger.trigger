@@ -1,3 +1,3 @@
-trigger AccountTrigger on Account (before insert) {
-    // Testing
+trigger AccountTrigger on Account (before insert, before update) {
+    // implementing new feature 
 }
