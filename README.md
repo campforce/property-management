@@ -1,5 +1,7 @@
 [![release](https://github.com/campforce/property-management/actions/workflows/release.yml/badge.svg)](https://github.com/campforce/property-management/actions/workflows/release.yml)
 
+[![validation](https://github.com/campforce/property-management/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/campforce/property-management/actions/workflows/validate.yml)
+
 # Salesforce DX Project: Next Steps
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
