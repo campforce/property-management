@@ -5,7 +5,7 @@
 # Property Management App
 
 
-# Contributors
+## Contributors
 <a href = "https://github.com/campforce/property-management/graphs/contributors">
   <img src = "https://contrib.rocks/image?repo=campforce/property-management"/>
 </a>
