@@ -14,4 +14,4 @@ jobs:
       - name: Set Default Username
         run: node_modules/sfdx-cli/bin/run config:set defaultusername=devhub
       - name: Deploy to Production
-        run: node_modules/sfdx-cli/bin/run force:source:deploy --sourcepath force-app
+        run: node_modules/sfdx-cli/bin/run force:source:deploy --sourcepath force-app -l RunLocalTests
