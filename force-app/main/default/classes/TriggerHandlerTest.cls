@@ -18,12 +18,12 @@ private class TriggerHandlerTest {
    ***************************************/
 
   // contexts tests
-
+	
   @isTest
   static void testBeforeInsert() {
     beforeInsertMode();
     handler.run();
-    System.assertEquals('beforeIns2ert', lastMethodCalled, 'last method should be beforeInsert');
+    System.assertEquals('beforeInsert', lastMethodCalled, 'last method should be beforeInsert');
   }
 
   @isTest
