@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Martial_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Martial Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Married</fullName>
+                <default>false</default>
+                <label>Married</label>
+            </value>
+            <value>
+                <fullName>Single</fullName>
+                <default>false</default>
+                <label>Single</label>
+            </value>
+            <value>
+                <fullName>Widowed</fullName>
+                <default>false</default>
+                <label>Widowed</label>
+            </value>
+            <value>
+                <fullName>Divorced</fullName>
+                <default>false</default>
+                <label>Divorced</label>
+            </value>
+            <value>
+                <fullName>Separated</fullName>
+                <default>false</default>
+                <label>Separated</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
