@@ -15,5 +15,3 @@ jobs:
         run: node_modules/sfdx-cli/bin/run config:set defaultusername=devhub
       - name: Deploy to Production
         run: node_modules/sfdx-cli/bin/run force:source:deploy --sourcepath force-app -l RunLocalTests
-      - name: Assign permission set
-        run: node_modules/sfdx-cli/bin/run force:user:permset:assign -n superuser
