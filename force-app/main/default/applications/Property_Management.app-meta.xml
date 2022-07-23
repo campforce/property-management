@@ -18,5 +18,4 @@
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Case</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>Property_Management_UtilityBar</utilityBar>
 </CustomApplication>
