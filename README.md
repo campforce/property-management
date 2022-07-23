@@ -48,7 +48,7 @@
     ```
     sfdx force:org:open
     ```
-## Good luck!
+## Good luck 🙂
 <p align="center"><img src="https://user-images.githubusercontent.com/89274213/180623779-80d90bb4-c850-46c6-ab99-6a10c031e74e.gif"/></p>
 
 
