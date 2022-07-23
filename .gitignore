@@ -8,7 +8,7 @@ scripts
 
 # Salesforce cache
 .sfdx/
-.sf/config.json
+.sf/
 
 # Logs
 logs
