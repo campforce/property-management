@@ -7,7 +7,6 @@
         <editHeading>true</editHeading>
         <label>Information</label>
         <layoutColumns>
-            
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Property_Type__c</field>
