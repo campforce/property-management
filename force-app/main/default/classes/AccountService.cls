@@ -9,6 +9,6 @@ public with sharing class AccountService {
      * @author belekomurzakov
      */
     public static void notifyOnEmailChange(Map<Id, Account> oldMap, Map<Id, Account> newMap) {
-
+        System.debug('Hello world!');
     }
 }
