@@ -10,6 +10,9 @@ scripts
 .sfdx/
 .sf/
 
+# Local devserver
+.localdevserver
+
 # Logs
 logs
 *.log
