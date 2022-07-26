@@ -20,4 +20,20 @@ public with sharing class ContactService {
             }            
         }
     }
+
+    /**
+     * Method validates Phone before insert.
+     * 
+     * @param newList new inserted contacts
+     * @author belekomurzakov
+     */
+    public static void validatePhone(List<Contact> newList) {
+        for(Contact con : newList) {
+            try {
+                Integer x = Integer.valueOf(con.Phone);
+            } catch (Exception e) {
+                con.addError('Phone can be only numbers');
+            }
+        }
+    }
 }
