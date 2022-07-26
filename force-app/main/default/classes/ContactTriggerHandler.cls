@@ -14,6 +14,7 @@ public class ContactTriggerHandler extends TriggerHandler {
 
     public override void beforeInsert() {
         ContactService.validateTenant(newContactList);
+        ContactService.validatePhone(newContactList);
     }
 
     public override void afterInsert(){

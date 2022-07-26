@@ -4,9 +4,10 @@ private class ContactServiceTest {
     @IsTest
     static void validateTenantWithBadInputsTest() {
         //given
-        Contact tooYoung = new Contact(Credit_Score__c = 630, Occupation__c = 'Software Engineer', Birthdate = Date.newInstance(2010, 2, 17), Email='tooyoung@gmail.com');
-        Contact unemployeedTenant = new Contact(Credit_Score__c = 630, Occupation__c = 'Student', Birthdate = Date.newInstance(1975, 2, 17), Email='tooyoung@gmail.com');
-        Contact lowCreditScore = new Contact(Credit_Score__c = 628,  Occupation__c = 'Software Engineer', Birthdate = Date.newInstance(1975, 2, 17),Email='tooyoung@gmail.com' );
+        Contact tooYoung = new Contact(Phone = '000', Credit_Score__c = 630, Occupation__c = 'Software Engineer', Birthdate = Date.newInstance(2010, 2, 17), Email='tooyoung@gmail.com');
+        Contact unemployeedTenant = new Contact( Phone = '000', Credit_Score__c = 630, Occupation__c = 'Student', Birthdate = Date.newInstance(1975, 2, 17), Email='tooyoung@gmail.com');
+        Contact lowCreditScore = new Contact(Phone = '000', Credit_Score__c = 628,  Occupation__c = 'Software Engineer', Birthdate = Date.newInstance(1975, 2, 17),Email='tooyoung@gmail.com' );
+
 
         //when
         Test.startTest();
@@ -24,7 +25,7 @@ private class ContactServiceTest {
     @IsTest
     static void validateTenantWithGoodInputsTest() {
         //given
-        Contact testTenant = new Contact(LastName = 'test', Credit_Score__c = 630, Occupation__c = 'Software Engineer',  Birthdate = Date.newInstance(1975, 2, 17), Email='tooyoung@gmail.com');
+        Contact testTenant = new Contact(Phone = '000', LastName = 'test', Credit_Score__c = 630, Occupation__c = 'Software Engineer',  Birthdate = Date.newInstance(1975, 2, 17), Email='tooyoung@gmail.com');
 
         //when
         Test.startTest();
@@ -35,7 +36,17 @@ private class ContactServiceTest {
         System.assert(result.isSuccess());
     }
     
-
+    @IsTest
+    static void validatePhoneTest() {
+        //given
+        Contact testContact = new Contact(Phone = 'test string');
+        //when
+        Test.startTest();
+        Database.SaveResult result = Database.insert(testContact, false);
+        Test.stopTest();
+        //then
+        System.assertEquals(result.getErrors()[0].getMessage(), 'Phone can be only numbers');
+    }
 
     @IsTest
     static void sendWelcomeEmailPositiveTest(){
@@ -49,5 +60,4 @@ private class ContactServiceTest {
 
   
     }
-
 }
