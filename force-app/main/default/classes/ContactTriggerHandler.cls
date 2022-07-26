@@ -16,4 +16,8 @@ public class ContactTriggerHandler extends TriggerHandler {
         ContactService.validateTenant(newContactList);
         ContactService.validatePhone(newContactList);
     }
+
+    public override void afterInsert(){
+        ContactService.sendWelcomeEmail(newContactList);
+    }
 }
