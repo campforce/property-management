@@ -1,13 +1,15 @@
-public with sharing class LeadServiceTest {
-    public LeadServiceTest() {
-
+@isTest
+    private class LeadServiceTest {
         @isTest 
-        static void UpdTriggerLeadStatus (){
-            //given
-        Lead testLead=new Lead( LeadSource=='Partner Referral');
-            //when
-        test.startTest()
-            //then
-        }
+    private static void updateLeadStatusTest (){
+        Lead testLead=new Lead(FirstName='Kamila',LastName='BKK',
+                               Company ='MarsCO',Status='Open-Not Contacted');
+        
+        System.Test.startTest();
+        Insert testLead;
+        System.Test.stopTest();
+
+        testLead= [SELECT ID, Rating From Lead WHERE FirstName='Kamila' AND LastName='BKK'];
+    System.assertEquals(testLead.Rating, 'Hot'); 
     }
-}
+    }
