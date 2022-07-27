@@ -2,7 +2,7 @@
     private class LeadServiceTest {
         @isTest 
     private static void updateLeadStatusTest (){
-        Lead testLead=new Lead(FirstName='Kamila',LastName='BKK',Company ='MarsCO',Status='Open-Not Contacted');
+        Lead testLead=new Lead(FirstName='Kamila',LastName='BKK',Company ='MarsCO',Status='Open-Not Contacted',LeadSource = 'Partner Referral');
         
         Test.startTest();
         Insert testLead;
