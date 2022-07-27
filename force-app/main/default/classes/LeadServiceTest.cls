@@ -8,7 +8,7 @@
         Insert testLead;
         Test.stopTest();
 
-        testLead= [SELECT ID, Name From Lead WHERE FirstName='Kamila' AND LastName='BKK'];
+        testLead= [SELECT ID, Rating From Lead WHERE FirstName='Kamila' AND LastName='BKK'];
     System.assertEquals(testLead.Rating, 'Hot'); 
     }
     }
