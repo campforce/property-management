@@ -13,6 +13,6 @@ public class LeadTriggerHandler extends TriggerHandler {
     }
 
     public override void beforeUpdate() {
-      
+      LeadService.updateLeadStatus(newLeadList);
     }
 }
