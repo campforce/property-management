@@ -15,4 +15,9 @@ public class LeadTriggerHandler extends TriggerHandler {
     public override void beforeInsert(){
       LeadService.updateLeadStatus(newLeadList);
     }
+
+    public override void afterInsert(){
+      LeadService.createTaskLead(newLeadList);
+    }
+
 }
