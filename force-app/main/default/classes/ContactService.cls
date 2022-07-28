@@ -48,7 +48,12 @@ public with sharing class ContactService {
         }
     }
 
-    //This method sends Welcome Email to Newly Created Customer.
+    /**
+     * method sends Welcome Email to Newly Created Customer.
+     * 
+     * @param newList new inserted contacts
+     * @author kushtar
+     */
     public static void sendWelcomeEmail(List<Contact> newList) {
         for (Contact contact : newList) {
             try {
