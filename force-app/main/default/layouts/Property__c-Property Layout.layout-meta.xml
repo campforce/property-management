@@ -69,6 +69,10 @@
                 <behavior>Edit</behavior>
                 <field>Utility_Included__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Initial_Investment__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
