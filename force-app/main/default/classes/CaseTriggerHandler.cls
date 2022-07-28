@@ -13,6 +13,10 @@ public class CaseTriggerHandler extends TriggerHandler {
     }
 
     public override void beforeInsert() {
-      CaseService.emailSurveyButton(newCaseList);
+      CaseService.sendEmailSurvey(newCaseList);
+    }
+
+    public override void beforeUpdate() {
+        CaseService.sendEmailSurvey(newCaseList);
     }
 }
