@@ -12,7 +12,7 @@ public class CaseTriggerHandler extends TriggerHandler {
         this.oldCaseMap = (Map<Id, Case>) Trigger.oldMap;
     }
 
-    public override void beforeUpdate() {
-      
+    public override void beforeInsert() {
+      CaseService.emailSurveyButton(newCaseList);
     }
 }
