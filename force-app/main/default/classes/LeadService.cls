@@ -1,6 +1,6 @@
 public with sharing class LeadService {
  /**
-     * Method updates Lead status. When Lead sourse='Partner Referral' Lead rating updates to='Hot'
+     * Method updates the Lead status. When Lead sourse='Partner Referral' the Lead rating updates to='Hot'
      * 
      * @param newLead new inserted leads 
      * @author gulzatbaimyrzaeva 
