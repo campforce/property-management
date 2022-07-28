@@ -8,5 +8,6 @@ private class DummyTest {
         insert new Account(Name = 'test');
         insert new Opportunity(Name = 'test', StageName = 'New', CloseDate = Date.newInstance(2022, 09,01));
         insert new Case(Subject = 'test');
+        insert new Payments__c();
     }
 }
