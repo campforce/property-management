@@ -12,7 +12,7 @@ public class PaymentTriggerHandler extends TriggerHandler {
         this.oldPaymentMap = (Map<Id, Payments__c>) Trigger.oldMap;
     }
 
-    public override void beforeUpdate() {
+    public override void beforeInsert() {
       
     }
 }
