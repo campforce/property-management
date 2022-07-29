@@ -4,7 +4,7 @@ public with sharing class CaseService {
      * Method send Email feedback-survey on Case 'Closed'
      * 
      * @param newCase new inserted cases
-     * @author gulzatbaimyrzaeva}
+     * @author gulzatbaimyrzaeva
      */
     public static void sendEmailSurvey(List<Case> newCases){
         for(Case singleCase : newCases){
@@ -12,7 +12,7 @@ public with sharing class CaseService {
                 if (String.isBlank(singleCase.SuppliedEmail)){
                     singleCase.addError('Please fill in the Web email');
                 }
-                EmailService.send(singleCase.SuppliedEmail);      
+                EmailService.send(singleCase.SuppliedEmail, singleCase.ContactId);      
             }
         }
     }
