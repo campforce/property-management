@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>When tenant has not paid payment, it will be notified by email.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Notification About Bills Payment</name>
+    <style>none</style>
+    <subject>Bill Payment Notification</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
