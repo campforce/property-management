@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Outbound automatic Surveys to Customers</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Customer Feedback Survey Email</name>
+    <relatedEntityType>Contract</relatedEntityType>
+    <style>none</style>
+    <subject>Live a month rent FREE</subject>
+    <type>custom</type>
+    <uiType>SFX</uiType>
+</EmailTemplate>
