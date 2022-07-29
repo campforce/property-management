@@ -13,4 +13,39 @@ public with sharing class LeadService {
 }
     }
 }
+
+ /**
+     * Method create related task. Logic:
+     *  Hot → Create a task with Subject 'Contact in 24 hours',
+     *  Warm → Create a task with Subject 'Contact in 48 hours',
+    *   Cold → Create a task with Subject 'Contact in 72 hours'.
+     * 
+     * @param lstTaskToInsert new inserted tasks
+     * @author malikaaidarova
+     */
+
+ public static void createTaskLead (list<Lead> lstNew){
+    list<Task> lstTaskToInsert = new list<Task>();
+    for(Lead CreateTask: lstNew){
+        if(CreateTask.Rating == 'Hot')
+        {
+            Task tsk = new Task(WhoId = CreateTask.ID, subject = 'Contact in 24 hours', Description = 'Big Alert', priority = 'High');
+            lstTaskToInsert.add(tsk);
+        }
+        else if(CreateTask.Rating == 'Warm')
+        {
+            Task tsk = new Task(WhoId = CreateTask.ID, subject = 'Contact in 48 hours', Description = 'Alert', priority = 'Medium');
+            lstTaskToInsert.add(tsk);
+        }
+        else if(CreateTask.Rating == 'Cold')
+        {
+            Task tsk = new Task(WhoId = CreateTask.ID, subject = 'Contact in 72 hours', Description = 'Alert', priority = 'Low');
+            lstTaskToInsert.add(tsk);
+        }
+        
+    }
+    insert lstTaskToInsert;
+
+ }
+
 } 

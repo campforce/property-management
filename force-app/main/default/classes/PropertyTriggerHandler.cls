@@ -12,12 +12,16 @@ public class PropertyTriggerHandler extends TriggerHandler {
         this.oldPropertyMap = (Map<Id, Property__c>) Trigger.oldMap;
     }
 
+
     public override void beforeInsert() {
         PropertyService.petSmokerFeeBeforeInsert(newPropertyList);
+        PropertyService.IncomeCalculator(newPropertyList);
       
-    }
-    public override void beforeUpdate() {
-        PropertyService.petFeeBeforeUpdate(newPropertyMap,oldPropertyMap);
+
+    
+    public override void beforeUpdate(){
+      PropertyService.IncomeCalculator(newPropertyList);
+      PropertyService.petFeeBeforeUpdate(newPropertyMap,oldPropertyMap);
         PropertyService.smokerFeeBeforeUpdate(newPropertyMap,oldPropertyMap);
     }
 }
