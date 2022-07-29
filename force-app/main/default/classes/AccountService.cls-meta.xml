@@ -1,32 +1,5 @@
-<public class ConvertExchangeRates {
-
-    public static Decimal usdToInr(Decimal dollar) {
-        // Endpoint to be used using the string url
-        String url = 'https://api.exchangeratesapi.io/latest'; //?symbols=USD,KGS;
-        Decimal KGS = 0.0;
-        // Instantiate a new http object
-        Http h = new Http();
-        
-        // Instantiate a new HTTP request, specify the method (GET) as well as the endpoint
-        HttpRequest req = new HttpRequest();
-        req.setEndpoint(url);
-        req.setMethod('GET');
-        
-        // Send the request, and return a response
-        HttpResponse res = h.send(req);
-        
-        // If the request is successful, parse the JSON response.
-        if(res.getStatusCode()==200){
-            
-            // Deserialize the JSON string into collections of primitive data types.
-            Map<String,Object> results = (Map<String,Object>)JSON.deserializeUntyped(res.getBody());
-            Map<String,Object> value = (Map<String,Object>)results.get('rates');
-            Decimal usdRate = (Decimal)value.get('USD');
-            Decimal KGSRate = (Decimal)value.get('KGS');
-            KGS = (dollar/usdRate) * KGSRate;
-            System.debug('Rates of KGS: '+KGS);
-            return KGS;
-        }
-        return res.getStatusCode();
-    }
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexClass xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <status>Active</status>
+</ApexClass>
