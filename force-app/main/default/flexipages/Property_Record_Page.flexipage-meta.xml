@@ -154,6 +154,12 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>map</componentName>
+                <identifier>c_map</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentName>libsChartjs</componentName>
                 <identifier>c_libsChartjs</identifier>
             </componentInstance>

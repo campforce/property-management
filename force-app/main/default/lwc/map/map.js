@@ -14,9 +14,9 @@ export default class Map extends LightningElement {
         return [
             {
                 location: {
-                    City: this.property.fields.City__c.value,
-                    Country: this.property.fields.Country__c.value,
-                    Street: this.property.fields.Street__c.value,
+                    City: this.property.data.fields.City__c.value,
+                    Country: this.property.data.fields.Country__c.value,
+                    Street: this.property.data.fields.Street__c.value,
                 },           
                 icon: 'standard:account',
             },
