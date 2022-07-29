@@ -4,9 +4,9 @@ private class ContactServiceTest {
     @IsTest
     static void validateTenantWithBadInputsTest() {
         //given
-        Contact tooYoung = new Contact(Phone = '000', Credit_Score__c = 630, Occupation__c = 'Software Engineer', Birthdate = Date.newInstance(2010, 2, 17), Email='tooyoung@gmail.com');
-        Contact unemployeedTenant = new Contact( Phone = '000', Credit_Score__c = 630, Occupation__c = 'Student', Birthdate = Date.newInstance(1975, 2, 17), Email='tooyoung@gmail.com');
-        Contact lowCreditScore = new Contact(Phone = '000', Credit_Score__c = 628,  Occupation__c = 'Software Engineer', Birthdate = Date.newInstance(1975, 2, 17),Email='tooyoung@gmail.com' );
+        Contact tooYoung = new Contact(RecordTypeId = ContactService.TENANT_RECORD_TYPE_ID, LastName = 'test', Phone = '000', Credit_Score__c = 630, Occupation__c = 'Software Engineer', Birthdate = Date.newInstance(2010, 2, 17), Email='tooyoung@gmail.com');
+        Contact unemployeedTenant = new Contact(RecordTypeId = ContactService.TENANT_RECORD_TYPE_ID, LastName = 'test', Phone = '000', Credit_Score__c = 630, Occupation__c = 'Student', Birthdate = Date.newInstance(1975, 2, 17), Email='tooyoung@gmail.com');
+        Contact lowCreditScore = new Contact(RecordTypeId = ContactService.TENANT_RECORD_TYPE_ID, LastName = 'test', Phone = '000', Credit_Score__c = 628,  Occupation__c = 'Software Engineer', Birthdate = Date.newInstance(1975, 2, 17),Email='tooyoung@gmail.com' );
 
 
         //when
