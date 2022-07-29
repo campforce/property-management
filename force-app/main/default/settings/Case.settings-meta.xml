@@ -9,9 +9,6 @@
     <caseMergeInLightning>false</caseMergeInLightning>
     <closeCaseThroughStatusChange>true</closeCaseThroughStatusChange>
     <defaultCaseFeedLayoutOn>true</defaultCaseFeedLayoutOn>
-    <defaultCaseOwner>test-zlmsxiih12ya@example.com</defaultCaseOwner>
-    <defaultCaseOwnerType>User</defaultCaseOwnerType>
-    <defaultCaseUser>test-zlmsxiih12ya@example.com</defaultCaseUser>
     <emailToCase>
         <enableEmailToCase>false</enableEmailToCase>
     </emailToCase>
