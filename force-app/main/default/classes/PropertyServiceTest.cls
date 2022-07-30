@@ -78,5 +78,23 @@ private class PropertyServiceTest{
 
 
     }
+
+    @IsTest
+    static void checkForBillsEachMonthTest(){
+        //given
+        Contact newContact = new Contact(Phone = '000', Credit_Score__c = 700,  Occupation__c = 'Software Engineer', Birthdate = Date.newInstance(1975, 2, 17), Email='test@gmail.com', LastName='Zhaniev');
+        insert newContact;
+        Payments__c newPayment = new Payments__c(Date__c= Date.newInstance(2022, 7, 17), Tenants__c=newContact.Id);
+        insert newPayment;
+        Property__c newProperty = new Property__c(Is_Rented__c=true, Is_Paid__c=false, Tenant__c=newContact.Id);
+
+        
+        //when
+        Test.startTest();
+        insert newProperty;
+        Test.stopTest();
+
+  
+    }
 }
 
