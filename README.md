@@ -4,13 +4,17 @@
 
 # Property Management App
 
-## Requirements
+<img width="1512" alt="demo" src="https://user-images.githubusercontent.com/89274213/181918458-fa7b0970-27e2-4950-893f-579a7fcf7410.png">
+
+## Installation
+
+### Requirements
   - Enable Dev Hub in your Org
   - Install Salesforce CLI
   - Install Visual Studio Code
   - Install the Visual Studio Code Salesforce extensions
 
-## Installation
+---
 
 1. Clone this repository:
 
