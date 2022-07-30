@@ -1,0 +1,29 @@
+name: code-coverage
+on: [ workflow_dispatch ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install sfdx-cli    
+      - name: Populate auth file
+        run: 'echo "${{ secrets.SALESFORCE_AUTH_URL }}" > .SALESFORCE_AUTH_URL.txt'
+      - name: Authenticate Dev Hub
+        run: 'node_modules/sfdx-cli/bin/run force:auth:sfdxurl:store -f .SALESFORCE_AUTH_URL.txt -a devhub -d'
+      - name: Set Default Username
+        run: node_modules/sfdx-cli/bin/run config:set defaultusername=devhub
+ 
+      - name: Create scratch org
+        run: node_modules/sfdx-cli/bin/run force:org:create -f config/project-scratch-def.json --setalias test-scratch
+      - name: Push source
+        run: node_modules/sfdx-cli/bin/run force:source:push --targetusername test-scratch      
+      - name: Run tests
+        run: node_modules/sfdx-cli/bin/run force:apex:test:run --targetusername test-scratch --codecoverage --resultformat human --outputdir ./tests/apex      
+      - name: Upload code coverage
+        uses: codecov/codecov-action@v3
+        with:
+          flags: Apex                  
+      - name: Delete scratch org
+        if: always()
+        run: node_modules/sfdx-cli/bin/run force:org:delete --targetusername test-scratch --noprompt
