@@ -1,5 +1,5 @@
 public class PropertyTriggerHandler extends TriggerHandler {
-    
+
     private List<Property__c> newPropertyList;
     private List<Property__c> oldPropertyList;
     private Map<Id, Property__c> newPropertyMap;
@@ -19,8 +19,8 @@ public class PropertyTriggerHandler extends TriggerHandler {
     }
 
     public override void beforeUpdate() {
-      PropertyService.IncomeCalculator(newPropertyList);
-      PropertyService.petFeeBeforeUpdate(newPropertyMap,oldPropertyMap);
-      PropertyService.smokerFeeBeforeUpdate(newPropertyMap,oldPropertyMap);
+        PropertyService.IncomeCalculator(newPropertyList);
+        PropertyService.petFeeBeforeUpdate(newPropertyMap, oldPropertyMap);
+        PropertyService.smokerFeeBeforeUpdate(newPropertyMap, oldPropertyMap);
     }
 }

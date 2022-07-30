@@ -1,5 +1,5 @@
 public class PaymentTriggerHandler extends TriggerHandler {
-    
+
     private List<Payments__c> newPaymentList;
     private List<Payments__c> oldPaymentList;
     private Map<Id, Payments__c> newPaymentMap;
@@ -13,9 +13,9 @@ public class PaymentTriggerHandler extends TriggerHandler {
     }
 
     public override void afterInsert() {
-     PaymentService.isPaid(newPaymentList);
+        PaymentService.isPaid(newPaymentList);
     }
     public override void afterUpdate() {
         PaymentService.isPaid(newPaymentList);
-       }
+    }
 }

@@ -10,7 +10,7 @@ public with sharing class ContactService {
      */
     public static void validateTenant(List<Contact> newList) {
         for (Contact contact : newList) {
-            if(contact.RecordTypeId != TENANT_RECORD_TYPE_ID) {
+            if (contact.RecordTypeId != TENANT_RECORD_TYPE_ID) {
                 continue;
             }
             if (contact.Credit_Score__c == null || contact.Credit_Score__c < 629) {
@@ -37,7 +37,7 @@ public with sharing class ContactService {
      */
     public static void validatePhone(List<Contact> newList) {
         for (Contact con : newList) {
-            if(String.isBlank(con.Phone)) {
+            if (String.isBlank(con.Phone)) {
                 continue;
             }
             try {
@@ -49,19 +49,22 @@ public with sharing class ContactService {
     }
 
     /**
-     * method sends Welcome Email to Newly Created Customer.
+     * Method sends Welcome Email to Newly Created Customer.
      * 
      * @param newList new inserted contacts
      * @author kushtar
      */
     public static void sendWelcomeEmail(List<Contact> newList) {
+        Messaging.SingleEmailMessage[] messages = new List<Messaging.SingleEmailMessage>();
+
         for (Contact contact : newList) {
+            Messaging.SingleEmailMessage message = new Messaging.SingleEmailMessage();
+            message.toAddresses = new String[]{contact.Email};
+            message.plainTextBody = 'Hello, ' + contact.LastName + ' for your interest in our properties. Hope you will find what you like.';
+            messages.add(message);
+
             try {
-                Messaging.SingleEmailMessage message = new Messaging.SingleEmailMessage();
-                message.toAddresses = new String[]{contact.Email};
-                message.plainTextBody = 'Hello, ' + contact.Lastname + ' for your interest in our properties. Hope you will find what you like.';
-                Messaging.SingleEmailMessage[] messages = new List<Messaging.SingleEmailMessage>{message};
-                Messaging.SendEmailResult[] results = Messaging.sendEmail(messages);
+                Messaging.sendEmail(messages);
             } catch (Exception e) {
                 //do nothing.
             }

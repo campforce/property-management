@@ -1,5 +1,5 @@
 public class CaseTriggerHandler extends TriggerHandler {
-    
+
     private List<Case> newCaseList;
     private List<Case> oldCaseList;
     private Map<Id, Case> newCaseMap;
@@ -13,7 +13,7 @@ public class CaseTriggerHandler extends TriggerHandler {
     }
 
     public override void beforeInsert() {
-      CaseService.sendEmailSurvey(newCaseList);
+        CaseService.sendEmailSurvey(newCaseList);
     }
 
     public override void beforeUpdate() {

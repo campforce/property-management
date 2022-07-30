@@ -1,5 +1,5 @@
 public class AccountTriggerHandler extends TriggerHandler {
-    
+
     private List<Account> newAccountList;
     private List<Account> oldAccountList;
     private Map<Id, Account> newAccountMap;
@@ -13,6 +13,6 @@ public class AccountTriggerHandler extends TriggerHandler {
     }
 
     public override void beforeUpdate() {
-      AccountService.notifyOnEmailChange(oldAccountMap, newAccountMap);
+        AccountService.demonstrativeMethod(oldAccountMap, newAccountMap);
     }
 }
