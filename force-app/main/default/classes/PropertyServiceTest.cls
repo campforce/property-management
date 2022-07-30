@@ -37,10 +37,6 @@ public with sharing class PropertyServiceTest {
         Property__c result = [select Monthly_rent__c from Property__c where id =:testProp.id];
         System.assertEquals(1200, result.Monthly_Rent__c,'Result value is '+ result.Monthly_Rent__c);
     }
-}
-
-
-private class PropertyServiceTest{
     
     @IsTest
     static void MonthlyRentCalculatorTest() {
@@ -97,4 +93,3 @@ private class PropertyServiceTest{
   
     }
 }
-
