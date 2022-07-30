@@ -1,5 +1,5 @@
 public class OpportunityTriggerHandler extends TriggerHandler {
-    
+
     private List<Opportunity> newOpportunityList;
     private List<Opportunity> oldOpportunityList;
     private Map<Id, Opportunity> newOpportunityMap;
@@ -13,6 +13,6 @@ public class OpportunityTriggerHandler extends TriggerHandler {
     }
 
     public override void beforeUpdate() {
-      
+
     }
 }

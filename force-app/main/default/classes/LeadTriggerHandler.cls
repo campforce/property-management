@@ -1,5 +1,5 @@
 public class LeadTriggerHandler extends TriggerHandler {
-    
+
     private List<Lead> newLeadList;
     private List<Lead> oldLeadList;
     private Map<Id, Lead> newLeadMap;
@@ -13,11 +13,10 @@ public class LeadTriggerHandler extends TriggerHandler {
     }
 
     public override void beforeInsert() {
-      LeadService.updateLeadStatus(newLeadList);
+        LeadService.updateLeadStatus(newLeadList);
     }
 
-    public override void afterInsert(){
-      LeadService.createTaskLead(newLeadList);
+    public override void afterInsert() {
+        LeadService.createTaskLead(newLeadList);
     }
-
 }

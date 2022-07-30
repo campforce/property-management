@@ -1,5 +1,5 @@
 public class ContactTriggerHandler extends TriggerHandler {
-    
+
     private List<Contact> newContactList;
     private List<Contact> oldContactList;
     private Map<Id, Contact> newContactMap;
@@ -17,7 +17,7 @@ public class ContactTriggerHandler extends TriggerHandler {
         ContactService.validatePhone(newContactList);
     }
 
-    public override void afterInsert(){
+    public override void afterInsert() {
         ContactService.sendWelcomeEmail(newContactList);
     }
 }
