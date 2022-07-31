@@ -15,11 +15,11 @@ public class PropertyTriggerHandler extends TriggerHandler {
 
     public override void beforeInsert() {
         PropertyService.petSmokerFeeBeforeInsert(newPropertyList);
-        PropertyService.IncomeCalculator(newPropertyList);
+        PropertyService.incomeCalculator(newPropertyList);
     }
 
     public override void beforeUpdate() {
-        PropertyService.IncomeCalculator(newPropertyList);
+        PropertyService.incomeCalculator(newPropertyList);
         PropertyService.petFeeBeforeUpdate(newPropertyMap, oldPropertyMap);
         PropertyService.smokerFeeBeforeUpdate(newPropertyMap, oldPropertyMap);
     }
