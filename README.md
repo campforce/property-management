@@ -55,6 +55,48 @@
 ## Good luck 🙂
 <p align="center"><img src="https://user-images.githubusercontent.com/89274213/180623779-80d90bb4-c850-46c6-ab99-6a10c031e74e.gif"/></p>
 
+## Repo Structure
+```
+/
+├─ .github/workflows              # Github actions scripts
+├─ config/                        # Scratch org configuration
+├─ docs/                          # Web-to-Lead form for github page
+├─ force-app/
+│  ├─ main/default/       
+│  │  ├─ applications/  
+│  │  ├─ aura/  
+│  │  ├─ classes/                 # Apex classes
+│  │  │  ├─ architecture/         # Trigger framework
+│  │  │  │  └─ triggerhandlers/   # Trigger handlers
+│  │  │  ├─ batchables/           # Batchable and Schedulable
+│  │  │  ├─ controllers/          # Controllers
+│  │  │  └─ services/             # Service layer
+│  │  │  
+│  │  ├─ contentassets/  
+│  │  ├─ email/unfiled$public/    # Email templates
+│  │  ├─ flexipages/
+│  │  ├─ layouts/
+│  │  ├─ lwc/                     # Lightning web components
+│  │  │  ├─ libsChartjs/          # Chart property types
+│  │  │  └─ map/                  # Google map
+│  │  ├─ objects/
+│  │  ├─ permissionsets/
+│  │  ├─ profiles/
+│  │  ├─ remotesitesettings/
+│  │  ├─ settings/
+│  │  ├─ staticresources/
+│  │  ├─ tabs/
+│  │  └─ triggers/                # Triggers
+│  └─ test/default/classes/       # Unit tests
+│
+├─ mainfiest/                     # Metadata to retrieve or deploy
+├─ .forceignore                   # Untracked files for source control
+├─ .gitignore                     # Untracked files for version control
+├─ README.md                      # This file
+├─ jest.config.js            
+├─ package.json              
+└─ sfdx-project.json         
+```
 
 ## Contributors
 <a href = "https://github.com/campforce/property-management/graphs/contributors">
