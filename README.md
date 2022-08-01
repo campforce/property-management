@@ -1,5 +1,5 @@
 [![release](https://github.com/campforce/property-management/actions/workflows/release.yml/badge.svg)](https://github.com/campforce/property-management/actions/workflows/release.yml)
-[![build](https://github.com/campforce/property-management/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/campforce/property-management/actions/workflows/validate.yml)
+[![build](https://github.com/campforce/property-management/actions/workflows/validate.yml/badge.svg)](https://github.com/campforce/property-management/actions/workflows/validate.yml)
 [![codecov](https://codecov.io/gh/campforce/property-management/branch/main/graph/badge.svg?token=MACRKT47PM)](https://codecov.io/gh/campforce/property-management)
 
 # Property Management App
