@@ -1,4 +1,4 @@
-name: validate
+name: build
 on: [ workflow_dispatch ]
 jobs:
   build:
