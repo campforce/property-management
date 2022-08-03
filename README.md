@@ -89,7 +89,6 @@
 │  │  └─ triggers/                # Triggers
 │  └─ test/default/classes/       # Unit tests
 │
-├─ mainfiest/                     # Metadata to retrieve or deploy
 ├─ .forceignore                   # Untracked files for source control
 ├─ .gitignore                     # Untracked files for version control
 ├─ README.md                      # This file
